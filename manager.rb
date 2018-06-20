@@ -10,9 +10,6 @@ class Employee
     @last_name = input_options[:last_name]
     @salary = input_options[:salary]
     @active = input_options[:active]
-    # @last_name = input_last_name
-    # @salary = input_salary
-    # @active = input_active
   end
 
   def print_info
@@ -47,6 +44,12 @@ employee2 = Employee.new(first_name: "Majora", last_name: "Carter", salary: 8000
 # p employee2.first_name
 
 class Manager < Employee
+  attr_reader :employees
+  def initialize(input_options)
+    super
+    @employees = input_options[:employees]
+  end
+
   def send_report
     p "about to go send that report..."
     # write some logic to send the report
@@ -54,7 +57,9 @@ class Manager < Employee
   end
 end
 
-manager1 = Manager.new({:first_name => "Manny", :last_name => "Jones", :salary => 100000, :active => true})
+manager1 = Manager.new({:first_name => "Manny", :last_name => "Jones", :salary => 100000, :active => true, :employees => [employee1, employee2]})
 
 manager1.print_info
 manager1.send_report
+
+p manager1.employees
