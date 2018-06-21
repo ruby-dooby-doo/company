@@ -21,10 +21,9 @@
 
 
 # class
-
 class Employee
   attr_reader :first_name, :last_name, :active, :salary
-  attr_writer :first_name
+  attr_writer :first_name, :active
 
   def initialize(input_options)
     # {:first_name => "Danilo", :last_name => "Campos", :salary => 70000, :active => true}
@@ -33,9 +32,6 @@ class Employee
     @last_name = input_options[:last_name]
     @salary = input_options[:salary]
     @active = input_options[:active]
-    # @last_name = input_last_name
-    # @salary = input_salary
-    # @active = input_active
   end
 
   def print_info
@@ -46,6 +42,7 @@ class Employee
     @salary *= 1.05
   end
 end
+
 
 # explicit options hash
 employee1 = Employee.new({:first_name => "Danilo", :last_name => "Campos", :salary => 70000, :active => true})
