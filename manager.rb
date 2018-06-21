@@ -1,3 +1,6 @@
+require './employee.rb'
+require './email_reportable.rb'
+
 class Manager < Employee
   include EmailReportable
   attr_reader :employees
@@ -18,6 +21,11 @@ class Manager < Employee
     end
   end
 end
+
+employee1 = Employee.new({:first_name => "Danilo", :last_name => "Campos", :salary => 70000, :active => true})
+
+# 'fancy'
+employee2 = Employee.new(first_name: "Majora", last_name: "Carter", salary: 80000, active: false)
 
 manager1 = Manager.new({:first_name => "Manny", :last_name => "Jones", :salary => 100000, :active => true, :employees => [employee1, employee2]})
 
