@@ -4,13 +4,12 @@ require './manager'
 require './intern'
 
 
-
-employee1 = Employee.new({:first_name => "Danilo", :last_name => "Campos", :salary => 70000, :active => true})
+employee1 = Actualize::Employee.new({:first_name => "Danilo", :last_name => "Campos", :salary => 70000, :active => true})
 
 # 'fancy'
-employee2 = Employee.new(first_name: "Majora", last_name: "Carter", salary: 80000, active: false)
+employee2 = Actualize::Employee.new(first_name: "Majora", last_name: "Carter", salary: 80000, active: false)
 
-manager1 = Manager.new({:first_name => "Manny", :last_name => "Jones", :salary => 100000, :active => true, :employees => [employee1, employee2]})
+manager1 = Actualize::Manager.new({:first_name => "Manny", :last_name => "Jones", :salary => 100000, :active => true, :employees => [employee1, employee2]})
 
 # manager1.print_info
 # manager1.send_report
@@ -25,19 +24,16 @@ p employee2.active
 
 
 
-intern1 = Intern.new(first_name: "Ingrid", last_name: "alksdhfl", salary: 0, active: true)
+intern1 = Actualize::Intern.new(first_name: "Ingrid", last_name: "alksdhfl", salary: 0, active: true)
 
 intern1.print_info
 intern1.send_report
 
-
-
-
 # explicit options hash
-employee1 = Employee.new({:first_name => "Danilo", :last_name => "Campos", :salary => 70000, :active => true})
+employee1 = Actualize::Employee.new({:first_name => "Danilo", :last_name => "Campos", :salary => 70000, :active => true})
 
 # 'fancy'
-employee2 = Employee.new(first_name: "Majora", last_name: "Carter", salary: 80000, active: false)
+employee2 = Actualize::Employee.new(first_name: "Majora", last_name: "Carter", salary: 80000, active: false)
 
 # employee1.print_info
 # employee1.give_annual_raise
