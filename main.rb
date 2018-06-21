@@ -1,6 +1,8 @@
+require './email_reportable'
 require './employee'
 require './manager'
 require './intern'
+
 
 
 employee1 = Employee.new({:first_name => "Danilo", :last_name => "Campos", :salary => 70000, :active => true})

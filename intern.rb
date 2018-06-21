@@ -1,6 +1,4 @@
 # an intern can do everything an employee can, and can also send reports
-require_relative 'employee'
-require './email_reportable'
 
 class Intern < Employee
   include EmailReportable
